@@ -172,12 +172,12 @@ LOAD ./libcsud.a
  .data          0x0000a000        0x0 build/gpio.o
  .data          0x0000a000       0xe0 build/keyboard.o
  .data          0x0000a0e0        0x0 build/mailbox.o
- .data          0x0000a0e0      0x220 build/main.o
- .data          0x0000a300        0x0 build/maths.o
- .data          0x0000a300        0x0 build/random.o
- .data          0x0000a300        0x0 build/systemTimer.o
- .data          0x0000a300       0x24 build/tags.o
- *fill*         0x0000a324       0xdc 3f3f3f3f
+ .data          0x0000a0e0      0x250 build/main.o
+ .data          0x0000a330        0x0 build/maths.o
+ .data          0x0000a330        0x0 build/random.o
+ .data          0x0000a330        0x0 build/systemTimer.o
+ .data          0x0000a330       0x24 build/tags.o
+ *fill*         0x0000a354       0xac 3f3f3f3f
  .data          0x0000a400     0xb100 build/terminal.o
  .data          0x00015500        0x0 build/text.o
  .data          0x00015500        0x0 ./libcsud.a(device.keyboard.c.o)
@@ -419,7 +419,7 @@ LOAD ./libcsud.a
                 0x00021484        0x0 ./libcsud.a(platform.broadcom2835.c.o)
  .v4_bx         0x00021484        0x0 ./libcsud.a(platform.broadcom2835.c.o)
 
-.text           0x00021484      0xbdc
+.text           0x00021484      0xc74
  *.c.o(.text)
  *(.text)
  .text          0x00021484      0x1d4 build/drawing.o
@@ -443,27 +443,27 @@ LOAD ./libcsud.a
                 0x000218a4                MailboxRead
                 0x000218d8                MailboxWrite
                 0x0002189c                GetMailboxBase
- .text          0x00021908      0x1a0 build/main.o
- .text          0x00021aa8       0x48 build/maths.o
-                0x00021aa8                DivideU32
- .text          0x00021af0       0x18 build/random.o
-                0x00021af0                Random
- .text          0x00021b08       0x40 build/systemTimer.o
-                0x00021b08                GetSystemTimerBase
-                0x00021b20                Wait
-                0x00021b10                GetTimeStamp
- .text          0x00021b48       0x74 build/tags.o
-                0x00021b48                FindTag
- .text          0x00021bbc      0x2c0 build/terminal.o
-                0x00021cb4                Print
-                0x00021bf4                TerminalDisplay
-                0x00021d8c                ReadLine
-                0x00021c9c                TerminalClear
- .text          0x00021e7c      0x1e4 build/text.o
-                0x00021f24                FormatString
-                0x00021ef8                SignedString
-                0x00021e7c                ReverseString
-                0x00021ea8                UnsignedString
+ .text          0x00021908      0x238 build/main.o
+ .text          0x00021b40       0x48 build/maths.o
+                0x00021b40                DivideU32
+ .text          0x00021b88       0x18 build/random.o
+                0x00021b88                Random
+ .text          0x00021ba0       0x40 build/systemTimer.o
+                0x00021ba0                GetSystemTimerBase
+                0x00021bb8                Wait
+                0x00021ba8                GetTimeStamp
+ .text          0x00021be0       0x74 build/tags.o
+                0x00021be0                FindTag
+ .text          0x00021c54      0x2c0 build/terminal.o
+                0x00021d4c                Print
+                0x00021c8c                TerminalDisplay
+                0x00021e24                ReadLine
+                0x00021d34                TerminalClear
+ .text          0x00021f14      0x1e4 build/text.o
+                0x00021fbc                FormatString
+                0x00021f90                SignedString
+                0x00021f14                ReverseString
+                0x00021f40                UnsignedString
 
 /DISCARD/
  *(*)

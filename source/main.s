@@ -152,11 +152,16 @@ ok:
 	okAct$:
 		mov r0,#16
 		b SetGpio
-	
+help:
+	.ascii "Available commands: "
+	.ascii "ok - turns LED on and off"
+	.ascii "cls - Clears screen"
+	.ascii "reset - resets Raspberry Pi if something bad happens"
+	.ascii "echo - Write text back to terminal"
 .section .data
 .align 2
 welcome:
-	.ascii "BareMetalPi - Careful assembled in Hunter Scott's kitchen."
+	.ascii "BareMetalPi - Carefully assembled in Hunter Scott's kitchen, with ingredients from Cambridge."
 welcomeEnd:
 .align 2
 prompt:
@@ -185,6 +190,7 @@ commandStringEcho: .ascii "echo"
 commandStringReset: .ascii "reset"
 commandStringOk: .ascii "ok"
 commandStringCls: .ascii "cls"
+commandStringHelp: .ascii "help"
 commandStringEnd:
 
 .align 2
@@ -193,4 +199,5 @@ commandTable:
 .int commandStringReset, reset$
 .int commandStringOk, ok
 .int commandStringCls, TerminalClear
+.int commandStringHelp, help
 .int commandStringEnd, 0
